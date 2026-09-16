@@ -81,6 +81,13 @@ Some networks can't reach Binance without a proxy. If yours can't, set
 (`host.docker.internal` reaches a proxy running on the host itself). Leave
 them unset if you don't need one.
 
+## Deploying it for real
+
+`terraform/` provisions a single EC2 instance that runs this whole
+stack. See [terraform/README.md](terraform/README.md) for usage and
+cost. It validates in CI (`terraform fmt`/`validate` on every push) but
+hasn't been applied against a live AWS account.
+
 ## Design decisions worth explaining
 
 - **Binance's public stream, not a paid data vendor.** The trade stream
