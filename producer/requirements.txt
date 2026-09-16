@@ -1,0 +1,6 @@
+websocket-client>=1.7
+kafka-python>=2.0
+# Confusingly, websocket-client's SOCKS support needs the "python-socks"
+# package (import name python_socks), not the older/unrelated "PySocks"
+# package (import name socks) that most guides mention.
+python-socks>=2.4
